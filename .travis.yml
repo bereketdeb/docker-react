@@ -8,3 +8,17 @@ before_install:
 
 script:
   - docker run -e CI=true bereketdeb/docker-react npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  app: "docker-react"
+  bucket_name: "elasticbeanstalk-us-east-1-657022513498"
+  bucket_path: "docker-react"
+  regeon: "us-east-1"
+  env: "DockerReact-env"
+  on:
+    branch: master
+  access_key_ID: "$Access_key_ID"
+  secure_access_key:
+    secure: "$Secret_access_key"
+  
