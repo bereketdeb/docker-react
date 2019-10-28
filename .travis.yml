@@ -1,0 +1,7 @@
+sudo: required
+services:
+  - docker
+beforeInstall:
+  - docker build -t bereketdeb/docker-react -f Dockerfile.dev .
+script:
+  - docker run -e CI=true bereket/docker-react npm run test -- --coverage
