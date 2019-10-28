@@ -18,7 +18,8 @@ deploy:
   env: "DockerReact-env"
   on:
     branch: master
-  access_key_ID: "$Access_key_ID"
+  access_key_ID: 
+    secure: "$Access_key_ID"
   secure_access_key:
     secure: "$Secret_access_key"
   
