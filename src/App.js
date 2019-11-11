@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React after Angular group work
+          Learn React after Angular group work, what about me
         </a>
       </header>
     </div>
